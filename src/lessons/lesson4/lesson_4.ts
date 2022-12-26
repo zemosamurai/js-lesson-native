@@ -7,12 +7,20 @@ console.log('lesson 4');
 // Task 01
 // Создайте промис, который постоянно находиться в состоянии pending.
 // В конструкторе промиса выведите в консоль сообщение "Promise is created".
-
+// const newPromise = new Promise((resolve, reject) =>{})
+// console.log(newPromise)
 
 // Task 02
 // Создайте промис, который после создания сразу же переходит в состояние resolve
 // и возвращает строку 'Promise Data'
 // Получите данные промиса и выведите их в консоль
+
+// const newPromise = new Promise((resolve, reject) =>{
+//     resolve('Promise Data')
+// })
+// newPromise.then((value) => {
+//     console.log(value)
+// })
 
 
 // Task 03
@@ -20,12 +28,26 @@ console.log('lesson 4');
 // и возвращает строку 'Promise Error'
 // Получите данные промиса и выведите их в консоль
 
+// const newPromise = new Promise((resolve, reject) =>{
+//     reject(new Error('Promise Error'))
+// })
+// newPromise.catch((error) => {
+//     console.log(error)
+// })
+
 
 // Task 04
 // Создайте промис, который переходит в состояние resolved через 3с.
 // (Используйте setTimeout)
 // и возвращает строку 'Promise Data'
 // Получите данные промиса и выведите их в консоль
+
+// const newPromise = new Promise((resolve, reject) =>{
+//     setTimeout(() => {resolve('Promise Data')}, 3000)
+// })
+// newPromise.then((value) => {
+//     console.log(value)
+// })
 
 
 // Task 05
@@ -49,6 +71,16 @@ console.log('lesson 4');
 // Создайте функцию print, которая выводит в консоль значение своего параметра
 // Добавьте два метода then и передайте созданные функции.
 
+// const onSuccess = (param: any) => `${param} Kim`
+// const print = (param: any) => console.log(param)
+//
+// const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('My name is'), 1000)
+// }).then((value) => {
+//     return onSuccess(value)
+// }).then((value) => {
+//     print(value)
+// })
 
 // Task 7
 // Создайте три промиса. Первый промис возвращает объект { name: "Anna" } через 2с,
@@ -56,7 +88,37 @@ console.log('lesson 4');
 // Получите результаты работы промисов, объедините свойства объектов
 // и выведите в консоль {name, age, city}
 
+// const promiseName = new Promise<{ name: string }>((resolve, reject) => {
+//     setTimeout(() => resolve({name: "Anna"}), 2000)
+// })
+// const promiseAge = new Promise<{ age: number }>((resolve, reject) => {
+//     setTimeout(() => resolve({age: 16}), 3000)
+// })
+// const promiseCity = new Promise<{ city: string }>((resolve, reject) => {
+//     setTimeout(() => resolve({city: ''}), 4000)
+// })
+//
+// let name: string
+// promiseName.then((value) => {
+//     name = value.name
+// })
+//
+// let age: number
+// promiseAge.then((value) => {
+//     age = value.age
+// })
+//
+// let city: string
+// promiseCity.then((value) => {
+//     city = value.city
+// }).then(() => {
+//     const final = {name, age, city}
+//     console.log(final)
+// })
+
+
 
 
 // just a plug
-export default ()=>{};
+export default () => {
+};
