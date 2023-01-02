@@ -1,3 +1,5 @@
+import axios from "axios";
+
 console.log('lesson 3');
 
 // Event loop
@@ -17,4 +19,15 @@ console.log('lesson 3');
 
 
 // just a plug
-export default ()=>{};
+export default () => {
+};
+
+
+//
+// axios.get('https://jsonplaceholder.typicode.com/todos/1')
+//     .then((value) => {
+//         console.log(value)
+//     })
+//
+
+
