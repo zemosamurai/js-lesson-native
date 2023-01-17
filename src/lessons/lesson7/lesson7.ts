@@ -20,11 +20,43 @@ console.log('Lesson 7');
 // walk => `${this.name} walking`
 // проверить, что методы работают
 
+// class Animal {
+//     constructor(name) {
+//         this.name = name || 'Animal'
+//     }
+//
+//     walk() {
+//         console.log(`${this.name} walking`)
+//     }
+//
+//     eat() {
+//         console.log(`${this.name} eating`)
+//     }
+//
+//     sleep() {
+//         console.log(`${this.name} sleeping`)
+//     }
+// }
+
 
 //Task 02
 // Реализовать класс Monkey на базе класса Animal,  конструктор принимает name(по умолчанию 'Monkey') в качестве
 // параметра, реализовать методы roar и climb аналогично классу Animal
 // проверить, что все методы работают
+
+// class Monkey extends Animal {
+//     constructor(name) {
+//         super(name || 'Monkey');
+//     }
+//     roar() {
+//         console.log(`${this.name} roaring`)
+//     }
+//
+//     climb() {
+//         console.log(`${this.name} climbing`)
+//     }
+// }
+
 
 
 //Task 03
@@ -32,9 +64,63 @@ console.log('Lesson 7');
 // параметра, реализовать методы speak и think аналогично классу Animal
 // проверить, что все методы работают
 
+// class Human extends Monkey {
+//     constructor(name) {
+//         super(name || 'Human');
+//     }
+//     speak() {
+//         console.log(`${this.name} speaking`)
+//     }
+//
+//     think() {
+//         console.log(`${this.name} thinking`)
+//     }
+// }
+
 
 // Task 04
 // Реализовать таски 01-03 через функции конструкторы в отдельном JS файле, реализовать наследование
+
+// function Animal(name) {
+//     this.name = name || 'Animal'
+// }
+//
+// Animal.prototype.walk = function () {
+//     console.log(`${this.name} walking`)
+// }
+// Animal.prototype.eat = function () {
+//     console.log(`${this.name} eating`)
+// }
+// Animal.prototype.sleep = function () {
+//     console.log(`${this.name} sleeping`)
+// }
+//
+//
+// function Monkey(name) {
+//     this.name = name || 'Monkey'
+// }
+// Monkey.prototype = Animal.prototype
+//
+// Monkey.prototype.roar = function () {
+//     console.log(`${this.name} roaring`)
+// }
+// Monkey.prototype.climb = function () {
+//     console.log(`${this.name} climbing`)
+// }
+//
+//
+//
+// function Human(name) {
+//     this.name = name || 'Human'
+// }
+// Human.prototype = Monkey.prototype
+//
+// Human.prototype.speak = function () {
+//     console.log(`${this.name} speaking`)
+// }
+// Human.prototype.thinking = function () {
+//     console.log(`${this.name} thinking`)
+// }
 
 
 // Task 05
